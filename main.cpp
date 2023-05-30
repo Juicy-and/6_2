@@ -9,17 +9,17 @@ int main()
 	int y;
 	char tmp;
 	Counter* counter = nullptr;
-	std::cout << "Âû õîòèòå óêàçàòü íà÷àëüíîå çíà÷åíèå ñ÷¸ò÷èêà? Ââåäèòå yes èëè no: ";
+	std::cout << "Ã‚Ã» ÃµÃ®Ã²Ã¨Ã²Ã¥ Ã³ÃªÃ Ã§Ã Ã²Ã¼ Ã­Ã Ã·Ã Ã«Ã¼Ã­Ã®Ã¥ Ã§Ã­Ã Ã·Ã¥Ã­Ã¨Ã¥ Ã±Ã·Â¸Ã²Ã·Ã¨ÃªÃ ? Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ yes Ã¨Ã«Ã¨ no: ";
 	std::cin >> command;
 	if (command == "yes") {
-		std::cout << "Ââåäèòå íà÷àëüíîå çíà÷åíèå ñ÷¸ò÷èêà: ";
+		std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã Ã·Ã Ã«Ã¼Ã­Ã®Ã¥ Ã§Ã­Ã Ã·Ã¥Ã­Ã¨Ã¥ Ã±Ã·Â¸Ã²Ã·Ã¨ÃªÃ : ";
 		std::cin >> y;
 		counter = new Counter(y);
 	}
 	else if (command == "no")
 		counter = new Counter;
 	do {
-		std::cout << "Ââåäèòå êîìàíäó ('+', '-', '=' èëè 'x'): ";
+		std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ÃªÃ®Ã¬Ã Ã­Ã¤Ã³ ('+', '-', '=' Ã¨Ã«Ã¨ 'x'): ";
 		std::cin >> tmp;
 		switch (tmp)
 		{
@@ -38,10 +38,11 @@ int main()
 			break;
 
 		case 'x':
-			std::cout << "Äî ñâèäàíèÿ!" << std::endl;
+			std::cout << "Ã„Ã® Ã±Ã¢Ã¨Ã¤Ã Ã­Ã¨Ã¿!" << std::endl;
 			break;
 		default:
-			std::cout << "Íåèçâåñòíàÿ êîìàíäà!" << std::endl;
+			std::cout << "ÃÃ¥Ã¨Ã§Ã¢Ã¥Ã±Ã²Ã­Ã Ã¿ ÃªÃ®Ã¬Ã Ã­Ã¤Ã !" << std::endl;
 		}
 	} while (tmp != 'x');
+	delete counter;
 }
